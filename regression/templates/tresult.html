@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}| Training Result{% endblock %}
+
+{% block content %}
+
+<div class="p-5 text-white text-center">        
+</div>
+<div class="p-5 text-white text-center">        
+</div>
+<div class="p-5 text-white text-center">        
+</div>
+
+
+<div class="container text-center">
+    <div class="card text-center">
+        <div class="alert alert-success" role="alert">
+            Success 🏆
+        </div>
+   
+        <div class="card-body">
+        <h5 class="card-title">Model Trained successfully!!!</h5>
+        <p class="card-text"><p>Accuracy achieved : {{accuracy}}  🎯 </p>
+        <a href="predict" class="btn btn-primary">Let's Predict 🚀 </a>
+        </div>
+    </div>
+</div>
+          
+    
+
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block title %}| DB{% endblock %}
+{% block content %}
+
+<div class="p-5 text-white text-center">        
+</div>
+
+
+
+<div class="class container">
+        <table class="table table-dark table-striped text-center">
+            <thead>
+            <tr>
+                {% comment %} <th scope="col">#</th> {% endcomment %}
+                <th scope="col"> Data Set Name</th>
+                <th scope="col">Accuracy Score (%)</th>        
+            </tr>
+            </thead>
+            <tbody>
+                {% for d in db %}
+                   
+                    <tr>                    
+                    {% comment %} <th scope="row">1</th> {% endcomment %}
+                    <td>{{d.name}}</td>
+                    <td>{{d.score}}</td>                    
+                
+                             
+                </tr>
+                {% endfor %}
+            
+            </tbody>
+        </table>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

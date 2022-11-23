@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}| Train{% endblock %}
+
+{% block content %}
+
+<div class="p-5 text-white text-center">        
+</div>
+<div class="p-5 text-white text-center">        
+</div>
+<div class="p-5 text-white text-center">        
+</div>
+<div class="p-5 text-white text-center">        
+</div>
+
+<div class="class container">
+<div class="row">
+    <div class="col">
+        <form action="tresult" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="class container">
+                <div class="mb-3">
+                <input type="file" class="form-control form-control-lg" id="file" name="file" type="file" accept=".csv">
+                </div>
+                <div>
+                    <button type="submit" class="btn btn-primary btn-lg"> Feed in my 🧠</button>
+                </div>
+        </form>
+    </div>
+</div>
+</div>
+
+
+
+{% endblock %}

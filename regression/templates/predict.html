@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block title %}| Predict{% endblock %}
+
+{% block content %}
+
+<div class="p-5 text-white text-center">        
+</div>
+<div class="p-5 text-white text-center">        
+</div>
+<div class="p-5 text-white text-center">        
+</div>
+<div class="p-5 text-white text-center">        
+</div>
+
+<div class="class container">
+<div class="row">
+    <div class="col">
+
+        <form action="presult">
+            {% csrf_token %}
+            <div class="form-group text-center">
+             
+                <select name="name_of_select" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                    <option selected>From my 🧠 which model you want to select ?</option>
+                    {% for d in data %}
+                    <option value="{{d.name}}">{{d.name}}</option>
+                    {% endfor %}
+                </select>
+                
+                <div class="form-group text-center">
+                <input type="text" name = 'val' class="form-control form-control-lg" placeholder="Enter the values">
+                 </div>      
+
+                    <div class="p-2 text-white text-center"></div>        
+                    
+
+                <div ><button type="submit" class="btn btn-primary btn-lg text-center"> Predict 💡</button></div>
+                    
+            </div>
+        </form>
+    </div>
+</div>
+</div>
+
+
+  
+{% endblock %}
