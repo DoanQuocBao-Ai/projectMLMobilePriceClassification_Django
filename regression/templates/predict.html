@@ -19,10 +19,10 @@
 
         <form action="presult">
             {% csrf_token %}
-            <div class="form-group text-center">
+            <div class="intro">
              
                 <select name="name_of_select" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-                    <option selected>From my 🧠 which model you want to select ?</option>
+                    <option selected>Chọn dataset để tranning model</option>
                     {% for d in data %}
                     <option value="{{d.name}}">{{d.name}}</option>
                     {% endfor %}
@@ -35,7 +35,7 @@
                     <div class="p-2 text-white text-center"></div>        
                     
 
-                <div ><button type="submit" class="btn btn-primary btn-lg text-center"> Predict 💡</button></div>
+                <div ><button type="submit" class="btn btn-primary btn-lg text-center">Dự đoán</button></div>
                     
             </div>
         </form>

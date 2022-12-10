@@ -18,11 +18,9 @@ def predict(request):
     return render(request, 'predict.html' ,{'data':data})
 
 def tresult(request):
-    if request.method == 'POST':
-        
+    if request.method == 'POST':     
         f = request.FILES['file']        
-        mname = str(f)
-        
+        mname = str(f)   
         c1 = clz.Clazif()
         acc = c1.train(f)
 
@@ -52,10 +50,6 @@ def presult(request):
     X = model['scaler'].transform([vals])
     y = model['model'].predict(X)
     return render(request, 'presult.html' ,{'values':y})
-      
-
-        
-
 def database(request):
     db = Clz.objects.all()
     return render(request, 'database.html' ,{'db':db})
